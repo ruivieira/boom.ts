@@ -16,4 +16,8 @@ export module Boom {
         }
         return array;
     }
+
+    export function reduce<T>(array: T[], callbackfn: (previous: T, current: T, index: number, array: T[]) => T, initialValue: T): T {
+        return array.reduce(callbackfn, initialValue);
+    }
 }
